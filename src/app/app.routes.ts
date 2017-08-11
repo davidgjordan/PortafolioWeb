@@ -16,5 +16,5 @@ const APP_ROUTES:Routes =[
 ];
 
 
-export const ROUTING :ModuleWithProviders = RouterModule.forRoot(APP_ROUTES, { useHash:true });
+export const ROUTING :ModuleWithProviders = RouterModule.forRoot(APP_ROUTES);
 
