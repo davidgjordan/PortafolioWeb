@@ -12,7 +12,7 @@ const APP_ROUTES:Routes =[
     { path: 'home',  component:PortafolioComponent },
     { path: 'about',  component:AboutComponent },
     { path: 'portafolio-item',  component:PortafolioItemComponent },
-    { path: '**', redirectTo:'', pathMatch:'full' }
+    { path: '**',pathMatch:'full', redirectTo:'' }
 ];
 
 
