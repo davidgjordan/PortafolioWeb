@@ -12,6 +12,9 @@ import { PortafolioItemComponent } from './components/portafolio-item/portafolio
 //rutas
 import { ROUTING } from './app.routes';
 
+//services
+import { InformacionService } from './services/informacion.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +30,7 @@ import { ROUTING } from './app.routes';
     HttpModule,
     ROUTING
   ],
-  providers: [],
+  providers: [InformacionService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
