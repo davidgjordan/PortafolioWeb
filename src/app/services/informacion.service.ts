@@ -4,8 +4,8 @@ import { Http } from '@angular/http';
 @Injectable()
 export class InformacionService {
 
-  public info:any = {};
-  public equipo:any = {};
+  public info:any = [];
+  public equipo:any = [];
   public cargadainfo:boolean = false;
   public cargadaSobreNosotros:boolean = false;
 
@@ -26,7 +26,7 @@ export class InformacionService {
   public getSobreNosotros(){
     this.http.get("https://paginawebportafolio-4ceec.firebaseio.com/equipo.json").subscribe( 
       (data) =>{
-        console.log(data.json());
+        //console.log(data.json());
         this.cargadaSobreNosotros = true;
         this.equipo = data.json();
       }
