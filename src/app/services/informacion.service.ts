@@ -5,14 +5,30 @@ import { Http } from '@angular/http';
 export class InformacionService {
 
   public info:any = {};
-  public cargada:boolean = false;
+  public equipo:any = {};
+  public cargadainfo:boolean = false;
+  public cargadaSobreNosotros:boolean = false;
 
   constructor(private http:Http) { 
-    http.get("assets/data/info.pagina.json").subscribe( 
+    this.getInfo();
+    this.getSobreNosotros();
+  }
+
+
+  public getInfo(){
+    this.http.get("assets/data/info.pagina.json").subscribe( 
+      (data) =>{
+        this.cargadainfo = true;
+        this.info = data.json();
+      }
+    );
+  }
+  public getSobreNosotros(){
+    this.http.get("https://paginawebportafolio-4ceec.firebaseio.com/equipo.json").subscribe( 
       (data) =>{
         console.log(data.json());
-        this.cargada = true;
-        this.info = data.json();
+        this.cargadaSobreNosotros = true;
+        this.equipo = data.json();
       }
     );
   }
