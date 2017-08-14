@@ -27,4 +27,10 @@ export class ProductoService {
    // }
    }
 
+
+   public getItem(codigoItem:string){
+     return this.http.get("https://paginawebportafolio-4ceec.firebaseio.com/productos/"+codigoItem+".json");
+          
+   }
+
 }
