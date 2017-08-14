@@ -7,11 +7,11 @@ import { Router } from  '@angular/router';
 })
 export class HeaderComponent {
 
-  constructor(private _infoS:InformacionService ,private router:Router ) {
+  constructor(public  _infoS:InformacionService ,private router:Router ) {
     
    }
 
- private buscarProducto( buscarTexto:string ){
+ public buscarProducto( buscarTexto:string ){
   this.router.navigate(['search', buscarTexto]);
  }
 

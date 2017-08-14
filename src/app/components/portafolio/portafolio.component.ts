@@ -7,7 +7,7 @@ import { ProductoService } from '../../services/producto.service';
 })
 export class PortafolioComponent {
 
-  constructor(private _productoS:ProductoService) {
+  constructor(public _productoS:ProductoService) {
     
    }
 

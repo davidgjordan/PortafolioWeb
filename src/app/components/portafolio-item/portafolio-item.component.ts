@@ -6,10 +6,10 @@ import { ProductoService } from '../../services/producto.service';
   templateUrl: './portafolio-item.component.html'
 })
 export class PortafolioItemComponent implements OnInit {
-  private producto:any = undefined;
+  public producto:any = undefined;
   private cod:string =undefined;
 
-  constructor(private route:ActivatedRoute, private _productoS:ProductoService) {
+  constructor(private route:ActivatedRoute, public _productoS:ProductoService) {
     route.params.subscribe( parametros =>{
       console.log(parametros['id']);
       _productoS.getItem(parametros['id']).subscribe(
