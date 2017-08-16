@@ -13,9 +13,9 @@ const APP_ROUTES:Routes =[
     { path: 'about',  component:AboutComponent },
     { path: 'portafolio-item/:id',  component:PortafolioItemComponent },
     { path: 'search/:termino',  component:SearchComponent },
-    { path: '**',pathMatch:'full', redirectTo:'' }
+    { path: '**',pathMatch: 'full', redirectTo:'' }
 ];
 
 
-export const ROUTING :ModuleWithProviders = RouterModule.forRoot(APP_ROUTES);
+export const ROUTING :ModuleWithProviders = RouterModule.forRoot(APP_ROUTES, { useHash:true});
 
